@@ -10,7 +10,17 @@ class Todos extends Component {
         todos: [
             {
                 id: 1,
-                value: "todo 1",
+                value: "Basuh pinggan",
+                isDone: false,
+            },
+            {
+                id: 2,
+                value: "Basuh baju",
+                isDone: false,
+            },
+            {
+                id: 3,
+                value: "mop lantai",
                 isDone: false,
             },
             

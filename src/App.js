@@ -24,7 +24,9 @@ class App extends Component{
           </p>
         </div>
         <div className="App-body">
-          <Todos />
+          <div style={{width: '80%', borderRadius: 10, paddingLeft: 300, paddingTop:50,}}>
+            <Todos />
+          </div>
         </div>
       </div>
     );
