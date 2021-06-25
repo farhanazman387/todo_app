@@ -1,25 +1,34 @@
-import logo from './logo.svg';
 import './App.css';
+import React, { Component } from 'react';
+import Moment from 'moment';
+import Todos from './components/todos';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+class App extends Component{
+  constructor() {
+    super();
+    this.state = {
+      date : Moment(Date().toString()).format("dddd Do MMMM, YYYY"),
+    }
+  }
+  render(){
+    return (
+      <div className="App">
+        <div className="App-header">
+          <p>
+            My Todo App with Reactjs (only class Component)
+          </p>
+          <br/>
+          <p>
+            - {this.state.date} -
+          </p>
+        </div>
+        <div className="App-body">
+          <Todos />
+        </div>
+      </div>
+    );
+  }
 }
 
 export default App;

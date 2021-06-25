@@ -1,7 +1,7 @@
 //handle add, delete, done for todo
 import React, { Component } from 'react';
 import Todo from './todo';
-import AddTodo from './addTodo';
+import AddTodo from './addtodo';
 
 class Todos extends Component {
     //fix value when run
