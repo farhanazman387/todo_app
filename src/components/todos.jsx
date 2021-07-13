@@ -44,7 +44,7 @@ class Todos extends Component {
     handleDone = todo =>{
         const todos = [...this.state.todos];
         todos.map((t) => {
-            if(t.id == todo.id){
+            if(t.id === todo.id){
                 t.isDone = !t.isDone;
             }
             return t;
@@ -77,7 +77,7 @@ class Todos extends Component {
                     {
                         this.state.todos.map((todo, index) => (
                             <tr key={todo.id}>
-                                <Todo index={index+1} todo={todo} fooDelete={this.handleDelete} fooDoneDone={this.handleDone}/>
+                                <Todo index={index+1} todo={todo} whenDelete={this.handleDelete} whenDone={this.handleDone}/>
                             </tr>
                         ))
                     }

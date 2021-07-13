@@ -8,7 +8,7 @@ class Todo extends Component{
                     {this.props.index}
                 </td>
                 <td style={{ width: 15 }} className="text-center">
-                    <input type="checkbox" defaultChecked={this.props.todo.isDone}  onChange={() => this.props.fooDoneDone(this.props.todo)} />
+                    <input type="checkbox" defaultChecked={this.props.todo.isDone}  onChange={() => this.props.whenDone(this.props.todo)} />
                 </td>
                 <td>
                     {
@@ -16,7 +16,7 @@ class Todo extends Component{
                     }
                 </td>
                 <td style={{ width: 100 }} className="text-center">
-                    <button onClick={() => this.props.fooDelete(this.props.todo.id)} className="btn btn-danger btn-sm">Delete</button>
+                    <button onClick={() => this.props.whenDelete(this.props.todo.id)} className="btn btn-danger btn-sm">Delete</button>
                 </td>
             </React.Fragment>
         );
